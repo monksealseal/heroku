@@ -11,9 +11,17 @@ import matplotlib.pyplot as plt
 from matplotlib.gridspec import GridSpec
 import sys
 import time
+import os
+
+# Setup paths
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+OUTPUT_DIR = os.path.join(SCRIPT_DIR, 'output')
+
+# Create output directory if it doesn't exist
+os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 # Add GCM to path
-sys.path.insert(0, '/home/user/heroku')
+sys.path.insert(0, SCRIPT_DIR)
 
 print("="*60)
 print("GCM DEMONSTRATION - Multiple Scenarios")
@@ -263,8 +271,9 @@ ax.text(0.1, 0.9, summary_text, transform=ax.transAxes,
        bbox=dict(boxstyle='round', facecolor='wheat', alpha=0.3))
 
 print("\nSaving comprehensive plot...")
-plt.savefig('gcm_scenarios_comprehensive.png', dpi=150, bbox_inches='tight')
-print("✓ Saved: gcm_scenarios_comprehensive.png")
+output_file = os.path.join(OUTPUT_DIR, 'gcm_scenarios_comprehensive.png')
+plt.savefig(output_file, dpi=150, bbox_inches='tight')
+print(f"✓ Saved: {output_file}")
 
 plt.close()
 
@@ -327,14 +336,15 @@ for name, model in list(scenarios.items())[:3]:  # First 3 scenarios
 
     plt.tight_layout()
     filename = f'gcm_detail_{name.lower().replace(" ", "_")}.png'
-    plt.savefig(filename, dpi=120, bbox_inches='tight')
-    print(f"✓ Saved: {filename}")
+    output_file = os.path.join(OUTPUT_DIR, filename)
+    plt.savefig(output_file, dpi=120, bbox_inches='tight')
+    print(f"✓ Saved: {output_file}")
     plt.close()
 
 print("\n" + "="*60)
 print("ALL PLOTS GENERATED!")
 print("="*60)
-print("\nGenerated files:")
+print(f"\nGenerated files in: {OUTPUT_DIR}/")
 print("  1. gcm_scenarios_comprehensive.png - Complete overview")
 print("  2. gcm_detail_tropical.png - Tropical details")
 print("  3. gcm_detail_midlatitude.png - Midlatitude details")
