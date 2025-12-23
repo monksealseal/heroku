@@ -1,0 +1,65 @@
+<svg width="800" height="500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="500" fill="#f7fafc"/>
+
+  <!-- Window frame -->
+  <rect x="20" y="20" width="760" height="460" rx="8" fill="white" stroke="#e2e8f0" stroke-width="2"/>
+
+  <!-- Header bar -->
+  <rect x="20" y="20" width="760" height="40" rx="8" fill="#667eea"/>
+  <circle cx="40" cy="40" r="6" fill="#f56565"/>
+  <circle cx="60" cy="40" r="6" fill="#f6ad55"/>
+  <circle cx="80" cy="40" r="6" fill="#48bb78"/>
+  <text x="400" y="45" text-anchor="middle" fill="white" font-family="Arial" font-size="16" font-weight="bold">GCM Web Interface</text>
+
+  <!-- Left panel -->
+  <rect x="30" y="70" width="250" height="400" rx="4" fill="#f7fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="155" y="95" text-anchor="middle" fill="#667eea" font-family="Arial" font-size="14" font-weight="bold">Configuration</text>
+
+  <!-- Config items -->
+  <rect x="45" y="110" width="220" height="30" rx="4" fill="white" stroke="#cbd5e0" stroke-width="1"/>
+  <rect x="45" y="150" width="220" height="30" rx="4" fill="white" stroke="#cbd5e0" stroke-width="1"/>
+  <rect x="45" y="190" width="220" height="30" rx="4" fill="white" stroke="#cbd5e0" stroke-width="1"/>
+  <rect x="45" y="230" width="220" height="30" rx="4" fill="white" stroke="#cbd5e0" stroke-width="1"/>
+
+  <!-- Run button -->
+  <rect x="45" y="380" width="220" height="45" rx="6" fill="#667eea"/>
+  <text x="155" y="407" text-anchor="middle" fill="white" font-family="Arial" font-size="14" font-weight="bold">🚀 Run Simulation</text>
+
+  <!-- Right panel -->
+  <rect x="290" y="70" width="480" height="400" rx="4" fill="white" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="530" y="95" text-anchor="middle" fill="#667eea" font-family="Arial" font-size="14" font-weight="bold">Results & Visualization</text>
+
+  <!-- Stats cards -->
+  <rect x="305" y="110" width="110" height="80" rx="6" fill="#667eea"/>
+  <text x="360" y="140" text-anchor="middle" fill="white" font-family="Arial" font-size="11">Temperature</text>
+  <text x="360" y="165" text-anchor="middle" fill="white" font-family="Arial" font-size="20" font-weight="bold">288K</text>
+
+  <rect x="425" y="110" width="110" height="80" rx="6" fill="#764ba2"/>
+  <text x="480" y="140" text-anchor="middle" fill="white" font-family="Arial" font-size="11">Wind Speed</text>
+  <text x="480" y="165" text-anchor="middle" fill="white" font-family="Arial" font-size="20" font-weight="bold">35 m/s</text>
+
+  <rect x="545" y="110" width="110" height="80" rx="6" fill="#667eea"/>
+  <text x="600" y="140" text-anchor="middle" fill="white" font-family="Arial" font-size="11">Humidity</text>
+  <text x="600" y="165" text-anchor="middle" fill="white" font-family="Arial" font-size="20" font-weight="bold">12 g/kg</text>
+
+  <!-- Plot area -->
+  <rect x="305" y="205" width="450" height="250" rx="6" fill="#f7fafc" stroke="#cbd5e0" stroke-width="1"/>
+
+  <!-- Simple contour map visualization -->
+  <ellipse cx="530" cy="290" rx="180" ry="80" fill="#ffa07a" opacity="0.3"/>
+  <ellipse cx="530" cy="310" rx="140" ry="60" fill="#ff6347" opacity="0.4"/>
+  <ellipse cx="530" cy="330" rx="100" ry="40" fill="#ff4500" opacity="0.5"/>
+
+  <!-- Grid lines -->
+  <line x1="320" y1="240" x2="740" y2="240" stroke="#cbd5e0" stroke-width="1" stroke-dasharray="5,5"/>
+  <line x1="320" y1="320" x2="740" y2="320" stroke="#cbd5e0" stroke-width="1" stroke-dasharray="5,5"/>
+  <line x1="320" y1="400" x2="740" y2="400" stroke="#cbd5e0" stroke-width="1" stroke-dasharray="5,5"/>
+
+  <line x1="400" y1="220" x2="400" y2="440" stroke="#cbd5e0" stroke-width="1" stroke-dasharray="5,5"/>
+  <line x1="530" y1="220" x2="530" y2="440" stroke="#cbd5e0" stroke-width="1" stroke-dasharray="5,5"/>
+  <line x1="660" y1="220" x2="660" y2="440" stroke="#cbd5e0" stroke-width="1" stroke-dasharray="5,5"/>
+
+  <!-- Labels -->
+  <text x="530" y="225" text-anchor="middle" fill="#4a5568" font-family="Arial" font-size="10">Surface Temperature Map</text>
+</svg>
