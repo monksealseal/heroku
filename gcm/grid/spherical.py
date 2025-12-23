@@ -6,7 +6,6 @@ metric terms and geometric factors.
 """
 
 import numpy as np
-from numba import jit
 
 
 class SphericalGrid:

@@ -225,9 +225,10 @@ class RadiationScheme:
             # Assume ozone concentrated in stratosphere
             for k in range(self.vgrid.nlev):
                 p_mb = state.p[k] / 100.0
-                if p_mb < 100.0:  # Stratosphere
-                    # Simple ozone profile
-                    tau[k] = 0.1 * np.exp(-(np.log(p_mb / 10.0))**2 / 2.0)
+                # Simple ozone profile (only in stratosphere)
+                tau[k] = np.where(p_mb < 100.0,
+                                 0.1 * np.exp(-(np.log(np.maximum(p_mb, 1.0) / 10.0))**2 / 2.0),
+                                 0.0)
 
         return tau
 

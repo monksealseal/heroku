@@ -6,7 +6,6 @@ Includes advection, pressure gradient force, Coriolis force, and gravity.
 """
 
 import numpy as np
-from numba import jit
 
 
 class AtmosphericDynamics:
