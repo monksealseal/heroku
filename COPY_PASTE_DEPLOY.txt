@@ -1,0 +1,98 @@
+================================================
+  COPY-PASTE DEPLOY INSTRUCTIONS
+================================================
+
+You're in a sandboxed environment that can't directly access Heroku.
+But everything is READY for you to deploy from your local machine!
+
+================================================
+  METHOD 1: ONE LINE DEPLOY
+================================================
+
+Copy and paste this into your local terminal:
+
+heroku login && heroku create && git push heroku claude/build-gcm-physics-VaCFZ:main && heroku open
+
+================================================
+  METHOD 2: STEP BY STEP
+================================================
+
+1. Login:
+   heroku login
+
+2. Create app:
+   heroku create my-gcm-app
+
+3. Deploy:
+   git push heroku claude/build-gcm-physics-VaCFZ:main
+
+4. Open:
+   heroku open
+
+================================================
+  WHAT YOU NEED
+================================================
+
+✅ Git repository (you have it)
+✅ All files committed (done!)
+✅ Heroku account (free at heroku.com)
+✅ Heroku CLI installed
+
+To install Heroku CLI:
+  macOS: brew install heroku
+  Linux: curl https://cli-assets.heroku.com/install-ubuntu.sh | sh
+  Windows: Download from heroku.com/cli
+
+================================================
+  DEPLOYMENT CHECKLIST
+================================================
+
+Everything is ready:
+[✓] app.py (Flask application)
+[✓] Procfile (Heroku config)
+[✓] requirements.txt (dependencies)
+[✓] runtime.txt (Python 3.11)
+[✓] templates/index.html (web UI)
+[✓] static/ (CSS & JS)
+[✓] gcm/ (complete GCM package)
+[✓] All changes committed
+[✓] On deployment branch
+
+================================================
+  AFTER DEPLOY
+================================================
+
+Your app will be live at:
+https://[your-app-name].herokuapp.com
+
+Try a test simulation:
+- Resolution: 32×16×10
+- Duration: 5 days
+- Profile: Tropical
+
+================================================
+  ESTIMATED TIME
+================================================
+
+From running the command to app being live: 3-5 minutes
+
+Build process takes ~2-3 minutes
+Then app starts immediately
+
+================================================
+  COST
+================================================
+
+Free tier: $0/month
+- 550 hours
+- Perfect for testing
+- Sleeps after 30 min
+
+Hobby tier: $7/month
+- Always on
+- Recommended for sharing
+
+================================================
+
+Ready to deploy? Copy the one-line command above!
+
