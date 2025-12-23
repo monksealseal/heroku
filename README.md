@@ -62,21 +62,55 @@ gcm/
 
 ## Usage
 
+### 🌐 Web Interface (Recommended)
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
+Run simulations through a modern web interface:
+
+1. **One-Click Deploy**: Click the button above to deploy to Heroku
+2. **Local Web Server**: Run `python app.py` and open http://localhost:5000
+3. **Configure**: Select resolution, atmospheric profile, CO₂ levels
+4. **Run**: Click "Run Simulation" and watch real-time progress
+5. **Visualize**: View interactive plots and diagnostics
+
+📖 See [WEB_README.md](WEB_README.md) and [DEPLOYMENT.md](DEPLOYMENT.md) for details.
+
+### 🐍 Python API
+
 ```python
 from gcm import GCM
 
 # Initialize model
 model = GCM(
-    resolution=(128, 64, 32),  # lon, lat, levels
-    timestep=600,  # seconds
-    physics_config='comprehensive'
+    nlon=64, nlat=32, nlev=20,  # Resolution
+    dt=600,  # Time step (seconds)
+    co2_ppmv=400,  # CO2 concentration
+    integration_method='rk3'
 )
+
+# Initialize atmosphere
+model.initialize(profile='tropical')
 
 # Run simulation
 model.run(duration_days=30)
 
-# Analyze output
+# Visualize
 model.plot_diagnostics()
+model.plot_state()
+```
+
+### 💻 Command Line Examples
+
+```bash
+# Basic simulation
+python examples/run_gcm.py
+
+# Climate sensitivity experiment
+python examples/climate_sensitivity.py
+
+# Multi-scenario analysis
+python run_scenarios.py
 ```
 
 ## Physics Equations
