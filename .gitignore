@@ -37,6 +37,7 @@ env/
 *.npz
 *.png
 *.pdf
+*.log
 
 # Jupyter
 .ipynb_checkpoints/
